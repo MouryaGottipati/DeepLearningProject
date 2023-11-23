@@ -1,0 +1,1 @@
+1.) Divide train data into 32000 for training and 10000 for testing they should contain labels for accuracy calculation

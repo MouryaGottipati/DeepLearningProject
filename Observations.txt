@@ -1,0 +1,15 @@
+1.) working with minibatches of size 16 is around 50 seconds for each epoch where as minibatches of size 32 is around 70seconds
+2.)Mobile Net Accuracy: 0.4
+Precision: 0.9929278642149929
+recall: 1.0
+f1-score: 0.9964513839602556
+Running Time: 658.05 seconds
+for batch size 32,epoch 15
+by augumenting the test data
+x_test = np.concatenate([
+    darkening(x_test[:2000], 1.5),
+    shift_left(x_test[2000:4000], 40),
+    flip_vertical_inplace(x_test[4000:6000],),
+    flip_horizontal_inplace(x_test[6000:8000]),
+    shift_right(x_test[8000:],40)
+])
