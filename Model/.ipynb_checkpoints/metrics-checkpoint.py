@@ -19,6 +19,8 @@ def f1_score(y_true, y_pred):
     rec = recall(y_true, y_pred)
     f1 = 2 * (prec * rec) / (prec + rec)
     return f1
+def average(accuracy,precision,recall,f1_score):
+    return (accuracy+precision+recall+f1_score)/4
 def running_time(start_time,end_time):
     running_time = end_time - start_time
     return running_time
