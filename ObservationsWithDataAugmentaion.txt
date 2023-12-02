@@ -1,0 +1,344 @@
+(64000, 28, 28, 1)
+(64000,)
+(10000, 28, 28, 1)
+(10000,)
+Model: "model_2"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_3 (InputLayer)        [(None, 28, 28, 1)]       0         
+                                                                 
+ conv2d_14 (Conv2D)          (None, 14, 14, 32)        320       
+                                                                 
+ batch_normalization_26 (Ba  (None, 14, 14, 32)        128       
+ tchNormalization)                                               
+                                                                 
+ re_lu_26 (ReLU)             (None, 14, 14, 32)        0         
+                                                                 
+ depthwise_conv2d_12 (Depth  (None, 14, 14, 32)        320       
+ wiseConv2D)                                                     
+                                                                 
+ batch_normalization_27 (Ba  (None, 14, 14, 32)        128       
+ tchNormalization)                                               
+                                                                 
+ re_lu_27 (ReLU)             (None, 14, 14, 32)        0         
+                                                                 
+ conv2d_15 (Conv2D)          (None, 14, 14, 64)        2112      
+                                                                 
+ batch_normalization_28 (Ba  (None, 14, 14, 64)        256       
+ tchNormalization)                                               
+                                                                 
+ re_lu_28 (ReLU)             (None, 14, 14, 64)        0         
+                                                                 
+ depthwise_conv2d_13 (Depth  (None, 7, 7, 64)          640       
+ wiseConv2D)                                                     
+                                                                 
+ batch_normalization_29 (Ba  (None, 7, 7, 64)          256       
+ tchNormalization)                                               
+                                                                 
+ re_lu_29 (ReLU)             (None, 7, 7, 64)          0         
+                                                                 
+ conv2d_16 (Conv2D)          (None, 7, 7, 128)         8320      
+                                                                 
+ batch_normalization_30 (Ba  (None, 7, 7, 128)         512       
+ tchNormalization)                                               
+                                                                 
+ re_lu_30 (ReLU)             (None, 7, 7, 128)         0         
+                                                                 
+ depthwise_conv2d_14 (Depth  (None, 7, 7, 128)         1280      
+ wiseConv2D)                                                     
+                                                                 
+ batch_normalization_31 (Ba  (None, 7, 7, 128)         512       
+ tchNormalization)                                               
+                                                                 
+ re_lu_31 (ReLU)             (None, 7, 7, 128)         0         
+                                                                 
+ conv2d_17 (Conv2D)          (None, 7, 7, 128)         16512     
+                                                                 
+ batch_normalization_32 (Ba  (None, 7, 7, 128)         512       
+ tchNormalization)                                               
+                                                                 
+ re_lu_32 (ReLU)             (None, 7, 7, 128)         0         
+                                                                 
+ depthwise_conv2d_15 (Depth  (None, 4, 4, 128)         1280      
+ wiseConv2D)                                                     
+                                                                 
+ batch_normalization_33 (Ba  (None, 4, 4, 128)         512       
+ tchNormalization)                                               
+                                                                 
+ re_lu_33 (ReLU)             (None, 4, 4, 128)         0         
+                                                                 
+ conv2d_18 (Conv2D)          (None, 4, 4, 256)         33024     
+                                                                 
+ batch_normalization_34 (Ba  (None, 4, 4, 256)         1024      
+ tchNormalization)                                               
+                                                                 
+ re_lu_34 (ReLU)             (None, 4, 4, 256)         0         
+                                                                 
+ depthwise_conv2d_16 (Depth  (None, 4, 4, 256)         2560      
+ wiseConv2D)                                                     
+                                                                 
+ batch_normalization_35 (Ba  (None, 4, 4, 256)         1024      
+ tchNormalization)                                               
+                                                                 
+ re_lu_35 (ReLU)             (None, 4, 4, 256)         0         
+                                                                 
+ conv2d_19 (Conv2D)          (None, 4, 4, 256)         65792     
+                                                                 
+ batch_normalization_36 (Ba  (None, 4, 4, 256)         1024      
+ tchNormalization)                                               
+                                                                 
+ re_lu_36 (ReLU)             (None, 4, 4, 256)         0         
+                                                                 
+ depthwise_conv2d_17 (Depth  (None, 2, 2, 256)         2560      
+ wiseConv2D)                                                     
+                                                                 
+ batch_normalization_37 (Ba  (None, 2, 2, 256)         1024      
+ tchNormalization)                                               
+                                                                 
+ re_lu_37 (ReLU)             (None, 2, 2, 256)         0         
+                                                                 
+ conv2d_20 (Conv2D)          (None, 2, 2, 512)         131584    
+                                                                 
+ batch_normalization_38 (Ba  (None, 2, 2, 512)         2048      
+ tchNormalization)                                               
+                                                                 
+ re_lu_38 (ReLU)             (None, 2, 2, 512)         0         
+                                                                 
+ global_average_pooling2d_2  (None, 512)               0         
+  (GlobalAveragePooling2D)                                       
+                                                                 
+ dense_4 (Dense)             (None, 1024)              525312    
+                                                                 
+ dropout_2 (Dropout)         (None, 1024)              0         
+                                                                 
+ dense_5 (Dense)             (None, 10)                10250     
+                                                                 
+=================================================================
+Total params: 810826 (3.09 MB)
+Trainable params: 806346 (3.08 MB)
+Non-trainable params: 4480 (17.50 KB)
+_________________________________________________________________
+Epoch 1/15
+2000/2000 [==============================] - 125s 58ms/step - loss: 0.3670 - accuracy: 0.8787
+Epoch 2/15
+2000/2000 [==============================] - 114s 57ms/step - loss: 0.1247 - accuracy: 0.9621
+Epoch 3/15
+2000/2000 [==============================] - 105s 53ms/step - loss: 0.0904 - accuracy: 0.9726
+Epoch 4/15
+2000/2000 [==============================] - 94s 47ms/step - loss: 0.0723 - accuracy: 0.9784
+Epoch 5/15
+2000/2000 [==============================] - 84s 42ms/step - loss: 0.0616 - accuracy: 0.9815
+Epoch 6/15
+2000/2000 [==============================] - 105s 53ms/step - loss: 0.0499 - accuracy: 0.9853
+Epoch 7/15
+2000/2000 [==============================] - 105s 53ms/step - loss: 0.0454 - accuracy: 0.9871
+Epoch 8/15
+2000/2000 [==============================] - 95s 48ms/step - loss: 0.0386 - accuracy: 0.9884
+Epoch 9/15
+2000/2000 [==============================] - 106s 53ms/step - loss: 0.0359 - accuracy: 0.9896
+Epoch 10/15
+2000/2000 [==============================] - 95s 48ms/step - loss: 0.0296 - accuracy: 0.9915
+Epoch 11/15
+2000/2000 [==============================] - 121s 61ms/step - loss: 0.0301 - accuracy: 0.9910
+Epoch 12/15
+2000/2000 [==============================] - 121s 60ms/step - loss: 0.0265 - accuracy: 0.9922
+Epoch 13/15
+2000/2000 [==============================] - 97s 48ms/step - loss: 0.0233 - accuracy: 0.9932
+Epoch 14/15
+2000/2000 [==============================] - 78s 39ms/step - loss: 0.0227 - accuracy: 0.9932
+Epoch 15/15
+2000/2000 [==============================] - 95s 48ms/step - loss: 0.0201 - accuracy: 0.9942
+313/313 [==============================] - 5s 13ms/step
+Model: "model_3"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_4 (InputLayer)        [(None, 28, 28, 1)]       0         
+                                                                 
+ conv2d_21 (Conv2D)          (None, 28, 28, 24)        240       
+                                                                 
+ batch_normalization_39 (Ba  (None, 28, 28, 24)        96        
+ tchNormalization)                                               
+                                                                 
+ re_lu_39 (ReLU)             (None, 28, 28, 24)        0         
+                                                                 
+ depthwise_conv2d_18 (Depth  (None, 28, 28, 24)        240       
+ wiseConv2D)                                                     
+                                                                 
+ batch_normalization_40 (Ba  (None, 28, 28, 24)        96        
+ tchNormalization)                                               
+                                                                 
+ re_lu_40 (ReLU)             (None, 28, 28, 24)        0         
+                                                                 
+ conv2d_22 (Conv2D)          (None, 28, 28, 24)        600       
+                                                                 
+ batch_normalization_41 (Ba  (None, 28, 28, 24)        96        
+ tchNormalization)                                               
+                                                                 
+ re_lu_41 (ReLU)             (None, 28, 28, 24)        0         
+                                                                 
+ depthwise_conv2d_19 (Depth  (None, 28, 28, 24)        240       
+ wiseConv2D)                                                     
+                                                                 
+ batch_normalization_42 (Ba  (None, 28, 28, 24)        96        
+ tchNormalization)                                               
+                                                                 
+ re_lu_42 (ReLU)             (None, 28, 28, 24)        0         
+                                                                 
+ conv2d_23 (Conv2D)          (None, 28, 28, 24)        600       
+                                                                 
+ batch_normalization_43 (Ba  (None, 28, 28, 24)        96        
+ tchNormalization)                                               
+                                                                 
+ re_lu_43 (ReLU)             (None, 28, 28, 24)        0         
+                                                                 
+ depthwise_conv2d_20 (Depth  (None, 28, 28, 24)        240       
+ wiseConv2D)                                                     
+                                                                 
+ batch_normalization_44 (Ba  (None, 28, 28, 24)        96        
+ tchNormalization)                                               
+                                                                 
+ re_lu_44 (ReLU)             (None, 28, 28, 24)        0         
+                                                                 
+ conv2d_24 (Conv2D)          (None, 28, 28, 24)        600       
+                                                                 
+ batch_normalization_45 (Ba  (None, 28, 28, 24)        96        
+ tchNormalization)                                               
+                                                                 
+ re_lu_45 (ReLU)             (None, 28, 28, 24)        0         
+                                                                 
+ tf.reshape (TFOpLambda)     (None, 28, 28, 3, 8)      0         
+                                                                 
+ tf.compat.v1.transpose (TF  (None, 28, 28, 8, 3)      0         
+ OpLambda)                                                       
+                                                                 
+ tf.reshape_1 (TFOpLambda)   (None, 28, 28, 24)        0         
+                                                                 
+ global_average_pooling2d_3  (None, 24)                0         
+  (GlobalAveragePooling2D)                                       
+                                                                 
+ dense_6 (Dense)             (None, 1024)              25600     
+                                                                 
+ dropout_3 (Dropout)         (None, 1024)              0         
+                                                                 
+ dense_7 (Dense)             (None, 10)                10250     
+                                                                 
+=================================================================
+Total params: 39282 (153.45 KB)
+Trainable params: 38946 (152.13 KB)
+Non-trainable params: 336 (1.31 KB)
+_________________________________________________________________
+Epoch 1/15
+2000/2000 [==============================] - 88s 42ms/step - loss: 0.7410 - accuracy: 0.7435
+Epoch 2/15
+2000/2000 [==============================] - 81s 40ms/step - loss: 0.3192 - accuracy: 0.9009
+Epoch 3/15
+2000/2000 [==============================] - 73s 37ms/step - loss: 0.2506 - accuracy: 0.9215
+Epoch 4/15
+2000/2000 [==============================] - 75s 38ms/step - loss: 0.2184 - accuracy: 0.9322
+Epoch 5/15
+2000/2000 [==============================] - 74s 37ms/step - loss: 0.1950 - accuracy: 0.9384
+Epoch 6/15
+2000/2000 [==============================] - 84s 42ms/step - loss: 0.1788 - accuracy: 0.9434
+Epoch 7/15
+2000/2000 [==============================] - 88s 44ms/step - loss: 0.1666 - accuracy: 0.9474
+Epoch 8/15
+2000/2000 [==============================] - 90s 45ms/step - loss: 0.1591 - accuracy: 0.9498
+Epoch 9/15
+2000/2000 [==============================] - 90s 45ms/step - loss: 0.1483 - accuracy: 0.9534
+Epoch 10/15
+2000/2000 [==============================] - 90s 45ms/step - loss: 0.1430 - accuracy: 0.9547
+Epoch 11/15
+2000/2000 [==============================] - 94s 47ms/step - loss: 0.1366 - accuracy: 0.9562
+Epoch 12/15
+2000/2000 [==============================] - 102s 51ms/step - loss: 0.1298 - accuracy: 0.9584
+Epoch 13/15
+2000/2000 [==============================] - 92s 46ms/step - loss: 0.1250 - accuracy: 0.9602
+Epoch 14/15
+2000/2000 [==============================] - 93s 47ms/step - loss: 0.1197 - accuracy: 0.9610
+Epoch 15/15
+2000/2000 [==============================] - 87s 44ms/step - loss: 0.1146 - accuracy: 0.9631
+313/313 [==============================] - 5s 15ms/step
+Accuracy:
+MobileNet-0.837 ShuffleNet-0.9149
+Precision:
+MobileNet-0.9623188405797102 ShuffleNet-0.9982142857142857
+Recall:
+MobileNet-0.9940119760479041 ShuffleNet-1.0
+F1-score:
+MobileNet-0.9779086892488954 SuffleNet-0.9991063449508489
+Average:
+MobileNet-0.9428098764691275 ShuffleNet-0.9780551576662837
+Running time:
+ MobileNet-1548.18 seconds ShuffleNet-1309.48 seconds
+
+Accuracy:
+MobileNet-0.837 ShuffleNet-0.9149
+Precision:
+MobileNet-0.9623188405797102 ShuffleNet-0.9982142857142857
+Recall:
+MobileNet-0.9940119760479041 ShuffleNet-1.0
+F1-score:
+MobileNet-0.9779086892488954 SuffleNet-0.9991063449508489
+Average:
+MobileNet-0.9428098764691275 ShuffleNet-0.9780551576662837
+Running time:
+ MobileNet-1548.18 seconds ShuffleNet-1309.48 seconds EVALUATE MODELS ON THIS RESULTS LIKE OVERFITTING ,UNDERFITTING
+
+ChatGPT
+Certainly, let's evaluate the models based on the provided results:
+
+Accuracy:
+
+MobileNet: 83.7%
+ShuffleNet: 91.49%
+Observation:
+ShuffleNet outperforms MobileNet in terms of accuracy.
+
+Precision:
+
+MobileNet: 96.23%
+ShuffleNet: 99.82%
+Observation:
+ShuffleNet has higher precision, indicating fewer false positives compared to MobileNet.
+
+Recall:
+
+MobileNet: 99.40%
+ShuffleNet: 100%
+Observation:
+Both models have high recall, but ShuffleNet has a perfect recall score.
+
+F1-score:
+
+MobileNet: 97.79%
+ShuffleNet: 99.91%
+Observation:
+ShuffleNet has a higher F1-score, suggesting a better balance between precision and recall.
+
+Average:
+
+MobileNet: 94.28%
+ShuffleNet: 97.81%
+Observation:
+The average metric also favors ShuffleNet, indicating better overall performance.
+
+Running Time:
+
+MobileNet: 1548.18 seconds
+ShuffleNet: 1309.48 seconds
+Observation:
+MobileNet took more time to train and test compared to ShuffleNet.
+
+Evaluation:
+
+Overfitting/Underfitting:
+If there were overfitting, we might expect the training accuracy to be significantly higher than the test accuracy. Check the training accuracy during model training.
+If there were underfitting, the model might not have learned the underlying patterns well. Check if increasing model complexity or training for more epochs improves performance.
+Recommendations:
+
+ShuffleNet appears to be the better-performing model across various metrics.
+Evaluate the learning curves (training and validation accuracy/loss) to understand the model's convergence and potential overfitting.
+Consider fine-tuning hyperparameters or exploring more advanced architectures for further improvement.
+Remember, these observations provide insights, but a deeper analysis of learning curves and hyperparameters is often needed for a comprehensive evaluation.
