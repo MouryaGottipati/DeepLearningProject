@@ -67,7 +67,7 @@ def train(model,x_train,y_train,epochs,batch_size):
     model.compile(optimizer='adam',
                              loss='sparse_categorical_crossentropy',
                              metrics=['accuracy'])
-    model.fit(x_train, y_train, epochs=epochs, batch_size=batch_size)
+    model.fit(x_train, y_train, epochs=epochs, batch_size=batch_size,validation_split=0)
     return model
 def test(model,x_test):
     # Get predicted values for the test set

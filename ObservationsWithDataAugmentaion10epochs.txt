@@ -1,0 +1,296 @@
+_____MOBILE NET_________
+(64000, 28, 28, 1)
+(64000,)
+(10000, 28, 28, 1)
+(10000,)
+WARNING:tensorflow:From C:\Users\hp\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+WARNING:tensorflow:From C:\Users\hp\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
+
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 28, 28, 1)]       0         
+                                                                 
+ conv2d (Conv2D)             (None, 14, 14, 32)        320       
+                                                                 
+ batch_normalization (Batch  (None, 14, 14, 32)        128       
+ Normalization)                                                  
+                                                                 
+ re_lu (ReLU)                (None, 14, 14, 32)        0         
+                                                                 
+ depthwise_conv2d (Depthwis  (None, 14, 14, 32)        320       
+ eConv2D)                                                        
+                                                                 
+ batch_normalization_1 (Bat  (None, 14, 14, 32)        128       
+ chNormalization)                                                
+                                                                 
+ re_lu_1 (ReLU)              (None, 14, 14, 32)        0         
+                                                                 
+ conv2d_1 (Conv2D)           (None, 14, 14, 64)        2112      
+                                                                 
+ batch_normalization_2 (Bat  (None, 14, 14, 64)        256       
+ chNormalization)                                                
+                                                                 
+ re_lu_2 (ReLU)              (None, 14, 14, 64)        0         
+                                                                 
+ depthwise_conv2d_1 (Depthw  (None, 7, 7, 64)          640       
+ iseConv2D)                                                      
+                                                                 
+ batch_normalization_3 (Bat  (None, 7, 7, 64)          256       
+ chNormalization)                                                
+                                                                 
+ re_lu_3 (ReLU)              (None, 7, 7, 64)          0         
+                                                                 
+ conv2d_2 (Conv2D)           (None, 7, 7, 128)         8320      
+                                                                 
+ batch_normalization_4 (Bat  (None, 7, 7, 128)         512       
+ chNormalization)                                                
+                                                                 
+ re_lu_4 (ReLU)              (None, 7, 7, 128)         0         
+                                                                 
+ depthwise_conv2d_2 (Depthw  (None, 7, 7, 128)         1280      
+ iseConv2D)                                                      
+                                                                 
+ batch_normalization_5 (Bat  (None, 7, 7, 128)         512       
+ chNormalization)                                                
+                                                                 
+ re_lu_5 (ReLU)              (None, 7, 7, 128)         0         
+                                                                 
+ conv2d_3 (Conv2D)           (None, 7, 7, 128)         16512     
+                                                                 
+ batch_normalization_6 (Bat  (None, 7, 7, 128)         512       
+ chNormalization)                                                
+                                                                 
+ re_lu_6 (ReLU)              (None, 7, 7, 128)         0         
+                                                                 
+ depthwise_conv2d_3 (Depthw  (None, 4, 4, 128)         1280      
+ iseConv2D)                                                      
+                                                                 
+ batch_normalization_7 (Bat  (None, 4, 4, 128)         512       
+ chNormalization)                                                
+                                                                 
+ re_lu_7 (ReLU)              (None, 4, 4, 128)         0         
+                                                                 
+ conv2d_4 (Conv2D)           (None, 4, 4, 256)         33024     
+                                                                 
+ batch_normalization_8 (Bat  (None, 4, 4, 256)         1024      
+ chNormalization)                                                
+                                                                 
+ re_lu_8 (ReLU)              (None, 4, 4, 256)         0         
+                                                                 
+ depthwise_conv2d_4 (Depthw  (None, 4, 4, 256)         2560      
+ iseConv2D)                                                      
+                                                                 
+ batch_normalization_9 (Bat  (None, 4, 4, 256)         1024      
+ chNormalization)                                                
+                                                                 
+ re_lu_9 (ReLU)              (None, 4, 4, 256)         0         
+                                                                 
+ conv2d_5 (Conv2D)           (None, 4, 4, 256)         65792     
+                                                                 
+ batch_normalization_10 (Ba  (None, 4, 4, 256)         1024      
+ tchNormalization)                                               
+                                                                 
+ re_lu_10 (ReLU)             (None, 4, 4, 256)         0         
+                                                                 
+ depthwise_conv2d_5 (Depthw  (None, 2, 2, 256)         2560      
+ iseConv2D)                                                      
+                                                                 
+ batch_normalization_11 (Ba  (None, 2, 2, 256)         1024      
+ tchNormalization)                                               
+                                                                 
+ re_lu_11 (ReLU)             (None, 2, 2, 256)         0         
+                                                                 
+ conv2d_6 (Conv2D)           (None, 2, 2, 512)         131584    
+                                                                 
+ batch_normalization_12 (Ba  (None, 2, 2, 512)         2048      
+ tchNormalization)                                               
+                                                                 
+ re_lu_12 (ReLU)             (None, 2, 2, 512)         0         
+                                                                 
+ global_average_pooling2d (  (None, 512)               0         
+ GlobalAveragePooling2D)                                         
+                                                                 
+ dense (Dense)               (None, 1024)              525312    
+                                                                 
+ dropout (Dropout)           (None, 1024)              0         
+                                                                 
+ dense_1 (Dense)             (None, 10)                10250     
+                                                                 
+=================================================================
+Total params: 810826 (3.09 MB)
+Trainable params: 806346 (3.08 MB)
+Non-trainable params: 4480 (17.50 KB)
+_________________________________________________________________
+WARNING:tensorflow:From C:\Users\hp\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\src\optimizers\__init__.py:309: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
+
+Epoch 1/10
+WARNING:tensorflow:From C:\Users\hp\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\src\utils\tf_utils.py:492: The name tf.ragged.RaggedTensorValue is deprecated. Please use tf.compat.v1.ragged.RaggedTensorValue instead.
+
+WARNING:tensorflow:From C:\Users\hp\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\src\engine\base_layer_utils.py:384: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2000/2000 [==============================] - 288s 112ms/step - loss: 0.3751 - accuracy: 0.8776
+Epoch 2/10
+2000/2000 [==============================] - 213s 106ms/step - loss: 0.1204 - accuracy: 0.9640
+Epoch 3/10
+2000/2000 [==============================] - 217s 108ms/step - loss: 0.0871 - accuracy: 0.9735
+Epoch 4/10
+2000/2000 [==============================] - 225s 112ms/step - loss: 0.0725 - accuracy: 0.9788
+Epoch 5/10
+2000/2000 [==============================] - 228s 114ms/step - loss: 0.0563 - accuracy: 0.9834
+Epoch 6/10
+2000/2000 [==============================] - 217s 109ms/step - loss: 0.0503 - accuracy: 0.9852
+Epoch 7/10
+2000/2000 [==============================] - 210s 105ms/step - loss: 0.0446 - accuracy: 0.9875
+Epoch 8/10
+2000/2000 [==============================] - 143s 71ms/step - loss: 0.0366 - accuracy: 0.9890
+Epoch 9/10
+2000/2000 [==============================] - 112s 56ms/step - loss: 0.0319 - accuracy: 0.9911
+Epoch 10/10
+2000/2000 [==============================] - 116s 58ms/step - loss: 0.0311 - accuracy: 0.9910
+313/313 [==============================] - 7s 18ms/step
+Accuracy:
+MobileNet-0.8173 
+Precision:
+MobileNet-0.8641975308641975 
+Recall:
+MobileNet-0.9468599033816425 
+F1-score:
+MobileNet-0.9036422314430612
+Average:
+MobileNet-0.8829999164222253 
+Running time:
+ MobileNet-1977.17 seconds
+
+__________SHUFFLE NET___________________
+
+(64000, 28, 28, 1)
+(64000,)
+(10000, 28, 28, 1)
+(10000,)
+WARNING:tensorflow:From C:\Users\hp\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+WARNING:tensorflow:From C:\Users\hp\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
+
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 28, 28, 1)]       0         
+                                                                 
+ conv2d (Conv2D)             (None, 28, 28, 24)        240       
+                                                                 
+ batch_normalization (Batch  (None, 28, 28, 24)        96        
+ Normalization)                                                  
+                                                                 
+ re_lu (ReLU)                (None, 28, 28, 24)        0         
+                                                                 
+ depthwise_conv2d (Depthwis  (None, 28, 28, 24)        240       
+ eConv2D)                                                        
+                                                                 
+ batch_normalization_1 (Bat  (None, 28, 28, 24)        96        
+ chNormalization)                                                
+                                                                 
+ re_lu_1 (ReLU)              (None, 28, 28, 24)        0         
+                                                                 
+ conv2d_1 (Conv2D)           (None, 28, 28, 24)        600       
+                                                                 
+ batch_normalization_2 (Bat  (None, 28, 28, 24)        96        
+ chNormalization)                                                
+                                                                 
+ re_lu_2 (ReLU)              (None, 28, 28, 24)        0         
+                                                                 
+ depthwise_conv2d_1 (Depthw  (None, 28, 28, 24)        240       
+ iseConv2D)                                                      
+                                                                 
+ batch_normalization_3 (Bat  (None, 28, 28, 24)        96        
+ chNormalization)                                                
+                                                                 
+ re_lu_3 (ReLU)              (None, 28, 28, 24)        0         
+                                                                 
+ conv2d_2 (Conv2D)           (None, 28, 28, 24)        600       
+                                                                 
+ batch_normalization_4 (Bat  (None, 28, 28, 24)        96        
+ chNormalization)                                                
+                                                                 
+ re_lu_4 (ReLU)              (None, 28, 28, 24)        0         
+                                                                 
+ depthwise_conv2d_2 (Depthw  (None, 28, 28, 24)        240       
+ iseConv2D)                                                      
+                                                                 
+ batch_normalization_5 (Bat  (None, 28, 28, 24)        96        
+ chNormalization)                                                
+                                                                 
+ re_lu_5 (ReLU)              (None, 28, 28, 24)        0         
+                                                                 
+ conv2d_3 (Conv2D)           (None, 28, 28, 24)        600       
+                                                                 
+ batch_normalization_6 (Bat  (None, 28, 28, 24)        96        
+ chNormalization)                                                
+                                                                 
+ re_lu_6 (ReLU)              (None, 28, 28, 24)        0         
+                                                                 
+ tf.reshape (TFOpLambda)     (None, 28, 28, 3, 8)      0         
+                                                                 
+ tf.compat.v1.transpose (TF  (None, 28, 28, 8, 3)      0         
+ OpLambda)                                                       
+                                                                 
+ tf.reshape_1 (TFOpLambda)   (None, 28, 28, 24)        0         
+                                                                 
+ global_average_pooling2d (  (None, 24)                0         
+ GlobalAveragePooling2D)                                         
+                                                                 
+ dense (Dense)               (None, 1024)              25600     
+                                                                 
+ dropout (Dropout)           (None, 1024)              0         
+                                                                 
+ dense_1 (Dense)             (None, 10)                10250     
+                                                                 
+=================================================================
+Total params: 39282 (153.45 KB)
+Trainable params: 38946 (152.13 KB)
+Non-trainable params: 336 (1.31 KB)
+_________________________________________________________________
+WARNING:tensorflow:From C:\Users\hp\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\src\optimizers\__init__.py:309: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
+
+Epoch 1/10
+WARNING:tensorflow:From C:\Users\hp\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\src\utils\tf_utils.py:492: The name tf.ragged.RaggedTensorValue is deprecated. Please use tf.compat.v1.ragged.RaggedTensorValue instead.
+
+WARNING:tensorflow:From C:\Users\hp\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\src\engine\base_layer_utils.py:384: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2000/2000 [==============================] - 139s 65ms/step - loss: 0.8233 - accuracy: 0.7090
+Epoch 2/10
+2000/2000 [==============================] - 164s 82ms/step - loss: 0.3266 - accuracy: 0.8981
+Epoch 3/10
+2000/2000 [==============================] - 163s 81ms/step - loss: 0.2522 - accuracy: 0.9222
+Epoch 4/10
+2000/2000 [==============================] - 164s 82ms/step - loss: 0.2160 - accuracy: 0.9321
+Epoch 5/10
+2000/2000 [==============================] - 170s 85ms/step - loss: 0.1966 - accuracy: 0.9388
+Epoch 6/10
+2000/2000 [==============================] - 176s 88ms/step - loss: 0.1812 - accuracy: 0.9442
+Epoch 7/10
+2000/2000 [==============================] - 177s 88ms/step - loss: 0.1701 - accuracy: 0.9472
+Epoch 8/10
+2000/2000 [==============================] - 170s 85ms/step - loss: 0.1614 - accuracy: 0.9495
+Epoch 9/10
+2000/2000 [==============================] - 167s 84ms/step - loss: 0.1552 - accuracy: 0.9509
+Epoch 10/10
+2000/2000 [==============================] - 160s 80ms/step - loss: 0.1456 - accuracy: 0.9547
+313/313 [==============================] - 11s 27ms/step
+Accuracy:
+ ShuffleNet-0.4635
+Precision:
+ShuffleNet-1.0
+Recall:
+ShuffleNet-0.570957095709571
+F1-score:
+ SuffleNet-0.7268907563025211
+Average:
+ShuffleNet-0.690336963003023
+Running time:
+ShuffleNet-1676.08 seconds
+
+Click to add a cell.
