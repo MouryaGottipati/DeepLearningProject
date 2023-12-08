@@ -41,9 +41,9 @@ def shuffle_net(input_shape):
     x = depthwise_separable_conv_block(x, 24, (3, 3), (1, 1))
     x = depthwise_separable_conv_block(x, 24, (3, 3), (1, 1))
 
-    
-
+ 
     x = channel_shuffle(x, groups=3)
+
 
     # Global Average Pooling
     x = layers.GlobalAveragePooling2D()(x)
